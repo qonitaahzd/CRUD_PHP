@@ -40,7 +40,7 @@ h3 {
 table {
     margin: auto;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
     background: white;
 }
 

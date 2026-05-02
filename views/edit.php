@@ -17,13 +17,66 @@ if(isset($_POST['update'])) {
 }
 ?>
 
-<link rel="stylesheet" href="../assets/style.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
 
-<h2>Edit Produk</h2>
+.container {
+    width: 40%;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
 
-<form method="POST">
-<input type="text" name="nama_produk" value="<?= $row['nama_produk']; ?>"><br>
-<input type="number" name="harga" value="<?= $row['harga']; ?>"><br>
-<input type="number" name="stok" value="<?= $row['stok']; ?>"><br>
-<button name="update">Update</button>
-</form>
+h2 {
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #D4AF37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b8962e;
+}
+
+/* tombol kembali */
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #555;
+}
+</style>
+
+<div class="container">
+    <h2>Edit Produk</h2>
+
+    <form method="POST">
+        <input type="text" name="nama_produk" value="<?= $row['nama_produk']; ?>" required><br>
+        <input type="number" name="harga" value="<?= $row['harga']; ?>" required><br>
+        <input type="number" name="stok" value="<?= $row['stok']; ?>" required><br>
+
+        <button name="update">Update</button>
+    </form>
+
+    <a class="back" href="../index.php">← Kembali</a>
+</div>
