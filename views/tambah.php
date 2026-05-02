@@ -12,13 +12,55 @@ if(isset($_POST['simpan'])) {
 }
 ?>
 
-<link rel="stylesheet" href="../assets/style.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
 
-<h2>Tambah Produk</h2>
+.container {
+    width: 40%;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
 
-<form method="POST">
-<input type="text" name="nama_produk" placeholder="Nama Produk"><br>
-<input type="number" name="harga" placeholder="Harga"><br>
-<input type="number" name="stok" placeholder="Stok"><br>
-<button name="simpan">Simpan</button>
-</form>
+h2 {
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #D4AF37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b8962e;
+}
+</style>
+
+<div class="container">
+    <h2>Tambah Produk</h2>
+
+    <form method="POST">
+        <input type="text" name="nama_produk" placeholder="Nama Produk" required><br>
+        <input type="number" name="harga" placeholder="Harga" required><br>
+        <input type="number" name="stok" placeholder="Stok" required><br>
+        <button name="simpan">Simpan</button>
+    </form>
+</div>
